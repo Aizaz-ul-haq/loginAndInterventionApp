@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+$import-theme-font: Roboto;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+$base-font: 'Roboto', sans-serif;
+$heading-font: 'Roboto', sans-serif;
+
+/*** Color Variables *****/
+$dark: #13192d;
+$light: #f9f9f9;
+$light-gray: #eff4f5;
+$white: #fff;
+$black: #fff;
+$primary: #4cb8ac;
+$light-primary: #dff7f9;
+$clight-primary: #e3fbf8;
+$xlight-primary: #f5fbfc;
+$primary-hover: #4cb8ac;
+$secondary: #4179bd;
+$secondary-hover: #3a6daa;
+$placeholder-color: #b7b9c1;
+$alert: #d0031c;
+$pending: #ff7a0a;
+$close: #1f60c3;
+$red: #d0031c;
+$success-green: #52c41a;
+$blue: #0053af;
+$light-blue: #f2fffe;
+
+$primary-ghost: #e4f8f9;
+
+$top-nav-color: none;
+$dark-text-clr: #13171f;
+$gray-text-clr: #656c78;
+$gray-text-clr-1: #616b7d;
+$mgray-text-clr: #7e828c;
+$mgray-text-clr-1: #7d8494;
+$lgray-text-clr: #acb2be;
+// $footer-bg: #2f3b3d;
+$footer-bg: #0c1a38;
+$footer-text-clr: rgba(255, 255, 255, 0.59);
+
+$left-nav-clr: #12161f;
+$left-nav-icon: #515b72;
+
+$input-bg: #fcfcfc;
+$input-b-clr: #e8e8e8;
+$input-br-clr: #ccd8db;
+$input-lbl-clr: #566074;
+$checkbox-txt-clr: #5f636c;
+
+$modal-h-clr: #3b414d;
+$detail-bg: #fcfbfb;
+
+$google: #db4437;
+$facebook: #3b5998;
+
+$fb-clr: #475993;
+$twt-clr: #03a9f4;
+$in-clr: #0077b7;
+
+$forsale-bg: #dff7f9;
+$forsale-clr: #4cb8ac;
+$salepending-bg: #fff2dc;
+$salepending-clr: #f5a623;
+$contingent-bg: #f1e7ff;
+$contingent-clr: #bb8eff;
+$sold-bg: #ffebee;
+$sold-clr: #eb6777;
+$withdrawn-bg: #fff0e2;
+$withdrawn-clr: #b78151;
+$for-rent-bg: #e2efff;
+$for-rent-clr: #4a90e2;
+$offer-pending-clr: #efa92b;
+$offer-pending-bg: #fdf8ed;
+$offer-accepted-clr: #4cb8ac;
+$offer-accepted-bg: #edf7f6;
