@@ -1,0 +1,116 @@
+:host ::ng-deep {
+    
+   
+    
+    .intervention-section {
+        .intervention-tbl{
+            .ant-table-tbody {
+                >tr {
+                    >td {
+                        padding: 0.75rem;
+                        p{
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            max-width: 123px;
+                            margin: 0px;
+                        }
+                        a{
+                            color: #0E2A47;
+                            &:hover{
+                                color: #911717;
+                            }
+                        }
+                       
+                    }
+                }
+            }
+            .ant-table-thead {
+                >tr {
+                    >th {
+                        padding: 0.5rem 0.5rem;
+                        color: #fff;
+                        background: #0E2A47;
+                    }
+                }
+            }
+            
+           
+        }
+    }   
+}
+
+
+
+.ant-form-horizontal {
+    .ant-form-item-label {
+        text-align: left !important;
+        font-weight: 600;
+    }
+}
+
+.ant-input{
+    border-right-width: 1px;
+    height: 42px;
+    border-radius: 4px;
+    &:hover {
+        border-color: #0E2A47;   
+    }
+}
+.ms-3{
+    margin-left: 6px;
+}
+.text-red{
+    color: #911717;
+}
+.text-blue{
+    color: #0E2A47;
+}
+.intervention-section {
+    h1{
+        font-size: 18px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 29px;
+            left: 10px;
+            width: 104px;
+            height: 3px;
+            background: #911717;
+            display: inline-block;
+        }
+    }
+    .add{
+        float: right;
+        color: #fff;
+        border-color: #911717;
+        text-transform: capitalize;
+        font-weight: 600;
+        border-radius: 5px;
+        background-color: #911717;
+        height: 42px;
+        margin-bottom: 13px;
+    }
+    padding:20px;
+    .intervention-tbl{
+        width: 100%;
+       
+    }
+   
+}
+.add-btn{
+    color: #fff;
+    border-color: #0E2A47;
+    background: #0E2A47;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+    margin: -14px auto;
+    display: block;
+    width: 20%;
+    height: 42px;
+    border-radius: 4px;
+    font-size: 16px;
+    float: right;
+}
+
+

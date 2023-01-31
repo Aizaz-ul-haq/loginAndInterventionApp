@@ -79,21 +79,6 @@ li {
     list-style-type: none;
 }
 
-/*---------------------------------------------*/
-/*input {
-  outline: none;
-  border: none;
-}
-
-textarea {
-  outline: none;
-  border: none;
-}
-
-textarea:focus,
-input:focus {
-  border-color: transparent !important;
-}*/
 input::-webkit-input-placeholder {
     color: $placeholder-color;
 }
@@ -126,26 +111,11 @@ textarea:-ms-input-placeholder {
     color: $placeholder-color;
 }
 
-/*---------------------------------------------*/
-/*button {
-  outline: none !important;
-  border: none;
-  background: transparent;
-}
-
-button:hover {
-  cursor: pointer;
-}*/
 
 iframe {
     border: none !important;
 }
 
-/*//////////////////////////////////////////////////////////////////
-[ utility ]*/
-
-/*==================================================================
-[ Text ]*/
 .txt1 {
     font-family: $base-font;
     font-size: 16px;
@@ -290,9 +260,10 @@ input.input100 {
 .sign-banner {
     height: 100vh;
     position: absolute;
-    background-image: url('https://d1um67fy76m42o.cloudfront.net/assets/images/signupimage.png');
+    background-image: url('/assets/img/Polygon Luminary.svg');
+    // background-image: url('https://d1um67fy76m42o.cloudfront.net/assets/images/signupimage.png');
     width: 100%;
-    background-position: center center;
+    background-position: 100% 100%;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -351,9 +322,9 @@ input.input100 {
     }
 }
 
-.sign-banner.in {
-    background-image: url('https://d1um67fy76m42o.cloudfront.net/assets/images/loginimage.jpg');
-}
+// .sign-banner.in {
+//     background-image: url('https://d1um67fy76m42o.cloudfront.net/assets/images/loginimage.jpg');
+// }
 
 .vfull-hight {
     height: 100vh;
@@ -387,12 +358,12 @@ input.input100 {
             font-weight: 500;
             letter-spacing: 1px;
             height: 38px;
-            line-height: 38px;
             padding: 0 16px;
 
             &:hover {
-                color: rgba(0, 0, 0, 0.85);
-                border-color: rgba(0, 0, 0, 0.85);
+                color: #fff;
+                border-color: rgb(14 42 71);
+                background: rgb(14 42 71);
             }
         }
     }
@@ -407,6 +378,7 @@ input.input100 {
             font-size: 26px;
             color: $dark-text-clr;
             line-height: 39px;
+            text-transform: uppercase;
         }
 
         p {

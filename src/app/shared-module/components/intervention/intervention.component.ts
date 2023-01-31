@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { InterventionService } from '../../services/intervention.service';
 
 @Component({
@@ -7,7 +8,49 @@ import { InterventionService } from '../../services/intervention.service';
   styleUrls: ['./intervention.component.scss']
 })
 export class InterventionComponent implements OnInit {
+    isVisible = false;
+    null=false;
+    validateForm!: UntypedFormGroup;
+    constructor(private interventionService: InterventionService, private fb: UntypedFormBuilder) {
+    
+    }
+    showModal(): void {
+      this.isVisible = true;
+    }
+  
+    handleOk(): void {
+      console.log('Button ok clicked!');
+      this.isVisible = false;
+    }
+  
+    handleCancel(): void {
+      console.log('Button cancel clicked!');
+      this.isVisible = false;
+    }
 
+    
+
+    submitForm(): void {
+      if (this.validateForm.valid) {
+        console.log('submit', this.validateForm.value);
+      } else {
+        Object.values(this.validateForm.controls).forEach(control => {
+          if (control.invalid) {
+            control.markAsDirty();
+            control.updateValueAndValidity({ onlySelf: true });
+          }
+        });
+      }
+    }
+    ngOnInit(): void {
+        this.validateForm = this.fb.group({
+            coordinates: [null, [Validators.required]],
+            identification: [null, [Validators.required]],
+            teams:[null,[Validators.required]],
+            location:[null,[Validators.required]],
+            DateTime:[null,[Validators.required]]
+        });
+      }
   interventions: any =
     [
     {
@@ -805,13 +848,8 @@ export class InterventionComponent implements OnInit {
 ];
   showForm: boolean = false;
 
-  constructor(private interventionService: InterventionService) {
-    
-  }
-  ngOnInit() {
-    // this.getAllInterventions();
-    
-  }
+ 
+
 
   // getAllInterventions() {
   //   this.interventionService.getInterventions().subscribe((data) => {

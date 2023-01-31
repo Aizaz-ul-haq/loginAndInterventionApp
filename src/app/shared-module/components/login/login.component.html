@@ -1,38 +1,36 @@
 <div nz-row>
-  <div nz-col [nzLg]="{ span: 8, offset: 0 }" [nzXs]="{ span: 0, offset: 0 }">
+  <div nz-col [nzLg]="{ span: 10, offset: 0 }" [nzXs]="{ span: 0, offset: 0 }">
     <div class="sign-banner in">
       <div class="overlay-black">
-        <div class="sign-logo" [routerLink]="'/'">
-          <img src="https://d1um67fy76m42o.cloudfront.net/assets/images/unlockd-logo.png" alt="Logo" width="" height=""  />
+        <!-- <div class="sign-logo" [routerLink]="'/'">
+          <img src="https://d1um67fy76m42o.cloudfront.net/assets/images/unlockd-logo.png" alt="Logo" width="" height=""  /> 
         </div>
         <div class="heading">
           <h3>Real Estate <span>Redefined.</span></h3>
           <p>Sell your house for a low fixed cost.</p>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
-  <div nz-col [nzLg]="{ span: 16, offset: 0 }" [nzXs]="{ span: 24, offset: 0 }">
+  <div nz-col [nzLg]="{ span: 14, offset: 0 }" [nzXs]="{ span: 24, offset: 0 }">
     <div class="vfull-hight">
-      <div class="sign-float-btn">
+      <!-- <div class="sign-float-btn">
         <span> Don't have an account?</span>
         <button *ngIf="!loginFromModal" nz-button nzShape="round" [routerLink]="['/signup']" nzType="default" id="sign_up">
           Sign Up
         </button>
-        <button  nz-button nzShape="round" nzType="default" id="sign_up">
-          Sign Up
-        </button>
-      </div>
+       
+      </div> -->
       <div nz-row nzType="flex" nzJustify="space-around" nzAlign="middle" class="sign-in-outer-div">
         <div nz-col [nzLg]="{ span: 6, offset: 0 }" [nzXs]="{ span: 0, offset: 0 }"></div>
         <div nz-col [nzLg]="{ span: 12, offset: 0 }" [nzXs]="{ span: 24, offset: 0 }" class="sign-in-content">
           <div class="header">
-            <img  src="https://d1um67fy76m42o.cloudfront.net/assets/images/arrow-right.svg" alt="arrow-right">
-            <img routerLink="/" src="https://d1um67fy76m42o.cloudfront.net/assets/images/unlokd-dark-logo.png" alt="unlokd-dark-logo">
+            <!-- <img  src="https://d1um67fy76m42o.cloudfront.net/assets/images/arrow-right.svg" alt="arrow-right">
+            <img routerLink="/" src="https://d1um67fy76m42o.cloudfront.net/assets/images/unlokd-dark-logo.png" alt="unlokd-dark-logo"> -->
           </div>
           <div class="signup-modal-form">
             <div class="heading">
-              <h1>Sign In Now</h1>
+              <h1>Sign In</h1>
             </div>
             <form nz-form [nzLayout]="'vertical'" [formGroup]="loginForm" class="sign-form validate-form">
               <nz-form-item>
@@ -59,20 +57,7 @@
                     </nz-spin>
                     <span *ngIf="!isLoading" id="sign_in">Sign in</span>
                   </button>
-                  <nz-divider nzText="or sign in with"></nz-divider>
-                  <div nz-row class="social-row">
-                    <div nz-col [nzLg]="{ span: 24, offset: 0 }" [nzXs]="{ span: 12, offset: 0 }">
-                      <button nz-button  class="social-btn gog" nzType="default">
-                        <i class="fab fa-google" aria-hidden="true"></i> Google
-                      </button>
-                    </div>
-                    <div nz-col [nzLg]="{ span: 24, offset: 0 }" [nzXs]="{ span: 12, offset: 0 }">
-                      <button nz-button  class="social-btn fb" nzType="default">
-                        <i class="fab fa-facebook-square" aria-hidden="true"></i>
-                        Facebook
-                      </button>
-                    </div>
-                  </div>
+                  
                 </nz-form-control>
               </nz-form-item>
               <nz-form-item class="term-area">

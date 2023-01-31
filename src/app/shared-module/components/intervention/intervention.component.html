@@ -1,26 +1,93 @@
-<section *ngIf="!showForm">
-    <div>
-        <div *ngFor="let intervention of interventions; let index = index;">
-            <p>
-                <span nz-icon nzType="home" nzTheme="outline"></span>{{intervention.coordinates}}
-            </p>
-            <p>
-                <span nz-icon nzType="check-circle" nzTheme="outline"></span>{{intervention.identification}}
-            </p>
-            <p>
-                <span nz-icon nzType="calendar" nzTheme="outline"></span>{{intervention.dateTime}}
-            </p>
-            <p>
-                <span nz-icon nzType="home" nzTheme="outline"></span> {{intervention.location}}
-            </p>
-            <p>
-                <span nz-icon nzType="team" nzTheme="outline"></span>{{intervention.teams[index]}}
-            </p>
+
+<section class="intervention-section">
+<div nz-row>
+        <div nz-col nzSpan="20">
+            <h1>Intervention Details</h1>
         </div>
-    </div>
+        <div nz-col nzSpan="4">
+            <button nz-button  nzType="default" class="add" (click)="showModal()">
+            Add intervention</button>
+        </div>
+</div>
+
+<nz-modal [(nzVisible)]="isVisible" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" nzWidth="800px"
+[nzFooter]="null" >
+    <ng-container *nzModalContent>
+        <div class="card intervention-form-card">
+            <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+                <nz-form-item>
+                <nz-form-label [nzSpan]="4" nzFor="coordinates">Coordinates</nz-form-label>
+                  <nz-form-control>
+                    <input type="text" nz-input formControlName="coordinates" placeholder="Enter Coordinates" />
+                  </nz-form-control>
+                </nz-form-item>
+                <nz-divider></nz-divider>
+                <nz-form-item>
+                    <nz-form-label [nzSpan]="4" nzFor="coordinates">Identification</nz-form-label>
+                  <nz-form-control>
+                    <input type="text" nz-input formControlName="identification" placeholder="Enter Identification" />
+                  </nz-form-control>
+                </nz-form-item>
+                <nz-divider></nz-divider>
+                <nz-form-item>
+                    <nz-form-label [nzSpan]="4" nzFor="coordinates">Teams</nz-form-label>
+                    <nz-form-control>
+                      <input type="text" nz-input formControlName="teams" placeholder="Enter Teams" />
+                    </nz-form-control>
+                </nz-form-item>
+                  <nz-divider></nz-divider>
+                  <nz-form-item>
+                    <nz-form-label [nzSpan]="4" nzFor="coordinates">Location</nz-form-label>
+                    <nz-form-control>
+                      <input type="text" nz-input formControlName="location" placeholder="Enter Location" />
+                    </nz-form-control>
+                  </nz-form-item>
+                  <nz-divider></nz-divider>
+                  <nz-form-item>
+                    <nz-form-label [nzSpan]="4" nzFor="coordinates">Date</nz-form-label>
+                    <nz-form-control>
+                      <input type="date" nz-input formControlName="Date" placeholder="Enter Date" />
+                    </nz-form-control>
+                  </nz-form-item>
+                  <nz-divider></nz-divider>
+                <button nz-button  [nzType]="'primary'" class="add-btn">Add</button>
+              </form>
+        </div>
+    </ng-container>
+</nz-modal>
+
+
+<nz-table #basicTable [nzData]="interventions" class="intervention-tbl">
+    <thead>
+      <tr>
+        <th>Sr.</th>
+        <th>Coordinates</th>
+        <th>Identification</th>
+        <th>Teams</th>
+        <th>Location</th>
+        <th>Date/Time</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let intervention of interventions;let index = index;">
+        <td><p>{{ index + 1 ==1? '':index }}</p></td>
+        <td ><p>{{intervention.coordinates}}</p></td>
+        <td ><p>{{intervention.identification}}</p></td>
+        <td ><p>{{intervention.teams[index]}}</p></td>
+        <td ><p>{{intervention.location}}</p></td>
+        <td ><p>{{intervention.dateTime}}</p></td>
+        <td > 
+        <a><span nz-icon nzType="edit" nzTheme="outline"></span></a>
+        <a class="ms-3"><span nz-icon nzType="delete" nzTheme="outline"></span></a></td>
+      </tr>
+    </tbody>
+</nz-table>
 </section>
-<section *ngIf="showForm">
-    <div>
-        <h1>Wo form joh dikhaya tha tum ne wo yahan daal do. pyara kar do zara. khali page ka maza nahi aaega. :)</h1>
-    </div>
-</section>
+
+
+
+
+
+
+
