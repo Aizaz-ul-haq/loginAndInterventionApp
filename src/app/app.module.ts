@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModuleModule } from './shared-module/shared-module.module';
 import { SHARED_ZORRO_MODULES } from './shared-zorro/shared-zorro.module';
+import { RouterModule } from '@angular/router';
 
 registerLocaleData(en);
 
@@ -22,6 +23,7 @@ registerLocaleData(en);
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,

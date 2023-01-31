@@ -5,6 +5,8 @@ import { InterventionComponent } from './components/intervention/intervention.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SHARED_ZORRO_MODULES } from '../shared-zorro/shared-zorro.module';
 import { RouterModule } from '@angular/router';
+import { InterventionService } from './services/intervention.service';
+  import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -14,14 +16,16 @@ import { RouterModule } from '@angular/router';
     InterventionComponent
   ],
   imports: [
-    CommonModule,
+  CommonModule,
     FormsModule,
     ReactiveFormsModule,
-  SHARED_ZORRO_MODULES,
+    SHARED_ZORRO_MODULES,
+    HttpClientModule,
     RouterModule
   ],
+  providers:[InterventionService],
   exports:[SHARED_ZORRO_MODULES,FormsModule,
     ReactiveFormsModule,RouterModule,LoginComponent,
-    InterventionComponent]
+    InterventionComponent,HttpClientModule]
 })
 export class SharedModuleModule { }

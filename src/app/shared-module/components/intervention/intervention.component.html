@@ -1,1 +1,26 @@
-<p>intervention works!</p>
+<section *ngIf="!showForm">
+    <div>
+        <div *ngFor="let intervention of interventions; let index = index;">
+            <p>
+                <span nz-icon nzType="home" nzTheme="outline"></span>{{intervention.coordinates}}
+            </p>
+            <p>
+                <span nz-icon nzType="check-circle" nzTheme="outline"></span>{{intervention.identification}}
+            </p>
+            <p>
+                <span nz-icon nzType="calendar" nzTheme="outline"></span>{{intervention.dateTime}}
+            </p>
+            <p>
+                <span nz-icon nzType="home" nzTheme="outline"></span> {{intervention.location}}
+            </p>
+            <p>
+                <span nz-icon nzType="team" nzTheme="outline"></span>{{intervention.teams[index]}}
+            </p>
+        </div>
+    </div>
+</section>
+<section *ngIf="showForm">
+    <div>
+        <h1>Wo form joh dikhaya tha tum ne wo yahan daal do. pyara kar do zara. khali page ka maza nahi aaega. :)</h1>
+    </div>
+</section>

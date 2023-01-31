@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,9 +13,14 @@ export class LoginComponent {
   loginFromModal: boolean = false;
   formSubmit:boolean = false;
 constructor(
-  private formBuilder: FormBuilder) {
+  private formBuilder: FormBuilder,private router:Router) {
+  this.formInitializer();
   
-    }
+}
+  
+  login() {
+    this.router.navigate(['/intervention']);
+  }
 
   formInitializer() {
     this.loginForm = this.formBuilder.group({

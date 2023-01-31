@@ -54,7 +54,7 @@
               </nz-form-item>
               <nz-form-item nz-row class="btn-area">
                 <nz-form-control>
-                  <button nz-button nzBlock nzSize="large" nzShape="round" nzType="primary"  nz-button [disabled]="isLoading" id="login">
+                  <button nz-button nzBlock nzSize="large" nzShape="round" nzType="primary"  nz-button [disabled]="isLoading" id="login" (click)="login()">
                     <nz-spin *ngIf="isLoading" nzSimple [nzIndicator]="indicatorTemplate">
                     </nz-spin>
                     <span *ngIf="!isLoading" id="sign_in">Sign in</span>
